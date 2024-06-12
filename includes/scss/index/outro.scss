@@ -1,0 +1,19 @@
+#outro {
+	opacity: 0;
+	box-sizing: content-box;
+	overflow: hidden;
+	z-index: -1;
+
+	#outroCenteredContent {
+		width: 100%;
+		padding: 0 32px;
+
+		.title {
+			font-size: 32px;
+		}
+		.description {
+			font-size: 20px;
+			font-weight: 200;
+		}
+	}
+}

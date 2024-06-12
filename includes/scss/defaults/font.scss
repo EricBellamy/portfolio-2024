@@ -1,0 +1,71 @@
+@import "config/_colors.scss";
+@import "config/_spacing.scss";
+@import "config/_fonts.scss";
+
+.title-splash {
+	font-size: 32px;
+	font-family: $font-title;
+	font-weight: bold;
+	margin-bottom: $splash-bottom;
+	color: $text-color;
+}
+
+.accent-primary {
+	color: $primary-color;
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: $accent-bottom;
+}
+.accent-secondary {
+	color: $secondary-color;
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: $accent-bottom;
+}
+.title-large {
+	font-size: 32px;
+	font-family: $font-title;
+	font-weight: bold;
+	margin-bottom: $title-bottom;
+	color: $text-color;
+}
+.title-regular {
+	font-size: 24px;
+	font-family: $font-title;
+	font-weight: bold;
+	margin-bottom: $title-bottom;
+	color: $text-color;
+}
+
+.description-large {
+	font-size: 20px;
+	line-height: 1.5;
+	color: $description-color;
+}
+.description-regular {
+	font-size: 16px;
+	line-height: 1.5;
+	color: $description-color;
+}
+
+.bold {
+	font-weight: bold;
+}
+.ff-title {
+	font-family: $font-title;
+}
+.ta-center {
+	text-align: center;
+}
+.ta-left {
+	text-align: left;
+}
+.ta-right {
+	text-align: right;
+}
+
+@each $size in $font-sizes {
+	.fs-#{$size} {
+		font-size: $size + px;
+	}
+}

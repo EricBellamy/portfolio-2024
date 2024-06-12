@@ -1,0 +1,77 @@
+.fullscreen {
+	height: 101vh;
+}
+.section {
+	padding-left: 32px;
+	padding-right: 32px;
+}
+
+#darkContent {
+	position: relative;
+	opacity: 0;
+}
+
+.faded {
+	opacity: 0;
+}
+.blurred {
+	position: absolute;
+	top: -32px;
+	left: -32px;
+	right: -32px;
+	bottom: -32px;
+	z-index: -1;
+	filter: blur(40px);
+}
+
+body {
+	background: #fff;
+	transition: background 0.3s ease;
+}
+body:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 25%;
+	height: 50vh;
+	// background: #f00;
+}
+
+.INTRO {
+	#intro {
+		// background: #fff;
+	}
+	#darkContent {
+		// background: #000;
+	}
+	#outro {
+		// opacity: 0;
+	}
+}
+
+.DARK_CONTENT {
+	// background: #000;
+
+	#intro {
+		// background: #fff;
+	}
+	#darkContent {
+		// background: #000;
+	}
+	#outro {
+		// background: #fff;
+	}
+}
+
+.OUTRO {
+	#intro {
+		// opacity: 0;
+	}
+	#darkContent {
+		// background: #000;
+	}
+	#outro {
+		// background: #fff;
+	}
+}

@@ -1,0 +1,58 @@
+@import "config/_spacing.scss";
+@each $size in $spacing {
+	.p-#{$size} {
+		padding: $size + px;
+	}
+	.pt-#{$size} {
+		padding-top: $size + px;
+	}
+	.pr-#{$size} {
+		padding-right: $size + px;
+	}
+	.pb-#{$size} {
+		padding-bottom: $size + px;
+	}
+	.pl-#{$size} {
+		padding-left: $size + px;
+	}
+	.py-#{$size} {
+		padding-top: $size + px;
+		padding-bottom: $size + px;
+	}
+	.px-#{$size} {
+		padding-right: $size + px;
+		padding-left: $size + px;
+	}
+}
+
+.pt-auto {
+	padding-top: auto;
+}
+.pr-auto {
+	padding-right: auto;
+}
+.pb-auto {
+	padding-bottom: auto;
+}
+.pl-auto {
+	padding-left: auto;
+}
+.py-auto {
+	padding-top: auto;
+	padding-bottom: auto;
+}
+.px-auto {
+	padding-right: auto;
+	padding-left: auto;
+}
+
+.vertical-padding {
+	padding-top: $vertical-padding;
+	padding-bottom: $vertical-padding;
+}
+.top-padding {
+	padding-top: $vertical-padding;
+}
+.bottom-padding {
+	padding-bottom: $vertical-padding;
+}

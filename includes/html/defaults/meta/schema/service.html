@@ -1,0 +1,36 @@
+<?
+const schema = {
+	"@context": "https://schema.org",
+	"@type": "Service",
+	"name": project.info.service.name,
+	"description": project.info.service.description,
+	"provider": {
+		"@type": "LocalBusiness",
+		"name": project.info.service.provider.name,
+		"address": {
+			"@type": "PostalAddress",
+			"streetAddress": project.info.service.provider.address.streetAddress,
+			"addressLocality": project.info.service.provider.address.addressLocality,
+			"addressRegion": project.info.service.provider.address.addressRegion,
+			"postalCode": project.info.service.provider.address.postalCode,
+			"addressCountry": project.info.service.provider.address.addressCountry
+		},
+		"telephone": project.info.profile.phone_link,
+		"url": project.info.url.full
+	},
+	"areaServed": {
+		"@type": "GeoCircle",
+		"geoMidpoint": {
+			"@type": "GeoCoordinates",
+			"latitude": project.info.service.areaServed.geoMidpoint.latitude,
+			"longitude": project.info.service.areaServed.geoMidpoint.longitude
+		},
+		"geoRadius": project.info.service.areaServed.geoRadius
+	},
+	"serviceType": project.info.service.serviceType,
+	"serviceOutput": project.info.service.serviceOutput,
+	"priceRange": project.info.service.priceRange
+}
+
+?>
+<script type="application/ld+json"><? log(JSON.stringify(schema)); ?></script>

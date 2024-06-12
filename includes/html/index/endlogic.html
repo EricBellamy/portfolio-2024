@@ -1,0 +1,196 @@
+<include src="index/distortion-load.js"></include>
+
+<!-- General resize scripts -->
+<script>
+	let scrollHeightSections;
+	window.updateScrollSections = function () {
+		const darkContentBounds = (document.getElementById("darkContent")).getBoundingClientRect();
+		const outroBounds = (document.getElementById("outro")).getBoundingClientRect();
+
+		const scrollTop = document.documentElement.scrollTop; // We need realtime scrolltop
+		scrollHeightSections = [
+			scrollTop + darkContentBounds.y, // 1/2 screen after the intro
+			(scrollTop + outroBounds.y) - window.innerHeight, // 1/2 screen before the outro
+			(scrollTop + darkContentBounds.bottom) - (window.innerHeight * 0.75)
+		];
+
+		const bodyHeight = document.body.clientHeight;
+		const outroBottom = scrollTop + outroBounds.y;
+	}
+
+	window.info = {
+		height: 0,
+		halfHeight: 0,
+		quarterHeight: 0,
+		sixthHeight: 0
+	}
+	window.updateHeights = function () {
+		window.info.height = window.innerHeight;
+		window.info.heightPx = window.innerHeight + "px";
+		window.info.halfHeight = Math.floor(window.innerHeight / 2);
+		window.info.halfHeightPx = window.info.halfHeight + "px";
+		window.info.quarterHeight = Math.floor(window.innerHeight / 4);
+		window.info.quarterHeightPx = window.info.quarterHeight + "px";
+		window.info.sixthHeight = Math.floor(window.innerHeight / 6);
+		window.info.sixthHeightPx = window.info.sixthHeight + "px";
+	}
+</script>
+
+<script>
+	function updateScrollPosition() {
+		// Are we in the intro section
+		if (window.scrollInfo.top < scrollHeightSections[0]) {
+			if (lastBodyClass === "INTRO") return false;
+			else if (lastBodyClass != false) document.body.classList.toggle(lastBodyClass, false);
+			document.body.classList.toggle("INTRO", true);
+			lastBodyClass = "INTRO";
+
+			return 0;
+
+		} else if (window.scrollInfo.top < scrollHeightSections[1]) { // Dark content
+			if (lastBodyClass === "DARK_CONTENT") return false;
+			else if (lastBodyClass != false) document.body.classList.toggle(lastBodyClass, false);
+			document.body.classList.toggle("DARK_CONTENT", true);
+			lastBodyClass = "DARK_CONTENT";
+
+			return 1;
+		} else { // Outro time
+			if (lastBodyClass === "OUTRO") return false;
+			else if (lastBodyClass != false) document.body.classList.toggle(lastBodyClass, false);
+			document.body.classList.toggle("OUTRO", true);
+			lastBodyClass = "OUTRO";
+
+			return 2;
+		}
+	}
+</script>
+
+<!-- Load process -->
+<script>
+	let contentSection = {
+		intro: document.getElementById("intro"),
+		darkContent: document.getElementById("darkContent"),
+		outro: document.getElementById("outro"),
+	}
+
+	// Fade in the page on load, based on scroll position
+	let lastBodyClass = false;
+	window.fadeInThePage = function () {
+		window.updateScrollSections();
+
+		let scrollPosition = updateScrollPosition();
+		switch (scrollPosition) {
+			case 0:
+				console.log("INTRO!");
+
+				// Set the WebGL shader to intro & start
+				updateDistortionMode(0);
+				window.distortionScroller.start();
+
+				contentSection.intro.style.zIndex = -1;
+				contentSection.outro.style.zIndex = -2;
+
+				setTimeout(function () {
+					document.body.style.background = "#000";
+				}, 300);
+
+				setTimeout(function () {
+					contentSection.intro.style.opacity = 1;
+					contentSection.darkContent.style.opacity = 1;
+				}, 600);
+				break;
+			case 1:
+				console.log("DARK CONTENT!");
+				contentSection.darkContent.style.opacity = 1;
+				contentSection.intro.style.zIndex = -1;
+				contentSection.outro.style.zIndex = -2;
+				
+				document.body.style.background = "#000";
+				break;
+			case 2:
+				console.log("OUTRO!");
+				document.body.style.background = "#fff";
+				contentSection.intro.style.zIndex = -2;
+				contentSection.outro.style.zIndex = -1;
+
+				setTimeout(function () {
+					contentSection.darkContent.style.opacity = 1;
+				}, 300);
+				setTimeout(function () {
+					contentSection.outro.style.opacity = 1;
+
+					// Set the WebGL shader to outro & start
+					updateDistortionMode(1);
+					window.distortionScroller.start();
+				}, 600);
+				break;
+		}
+	};
+	window.handleScrollEvent = function () {
+		let scrollPosition = updateScrollPosition();
+		switch (scrollPosition) {
+			case 0:
+				console.log("INTRO!");
+				contentSection.intro.style.opacity = 1;
+				contentSection.intro.style.zIndex = -1;
+				contentSection.darkContent.style.opacity = 1;
+
+				document.body.style.background = "#000";
+
+				// Set the WebGL shader to intro & start
+				updateDistortionMode(0);
+				window.distortionScroller.start();
+				break;
+			case 1:
+				console.log("DARK CONTENT SCROLL!");
+				contentSection.darkContent.style.opacity = 1;
+				contentSection.intro.style.opacity = 0;
+				contentSection.intro.style.zIndex = -1;
+				contentSection.outro.style.opacity = 0;
+				contentSection.outro.style.zIndex = -2;
+
+				document.body.style.background = "#000";
+
+				window.distortionScroller.stop();
+				break;
+			case 2:
+				console.log("OUTRO!");
+				contentSection.intro.style.zIndex = -2;
+				contentSection.outro.style.opacity = 1;
+				contentSection.outro.style.zIndex = -1;
+				contentSection.darkContent.style.opacity = 1;
+
+				document.body.style.background = "#fff";
+
+				// Set the WebGL shader to outro & start
+				updateDistortionMode(1);
+				window.distortionScroller.start();
+				break;
+		}
+	}
+
+	window.addEventListener("load", function () {
+		window.updateHeights();
+
+		const introCenteredContent = document.getElementById("introCenteredContent");
+		const outroCenteredContent = document.getElementById("outroCenteredContent");
+		introCenteredContent.style.top = window.info.halfHeightPx;
+		outroCenteredContent.style.top = window.info.halfHeightPx;
+
+		contentSection.intro.style.height = window.info.heightPx;
+		contentSection.intro.style.paddingBottom = window.info.sixthHeightPx;
+		contentSection.outro.style.height = window.info.heightPx;
+		contentSection.outro.style.paddingBottom = window.info.halfHeightPx;
+
+		window.loadDistortion(function () {
+			// Fade in the page now base on scroll position
+			window.fadeInThePage();
+
+			window.scroll.listen.urgent(window.handleScrollEvent);
+		});
+
+		window.resize.listen(function () {
+			window.updateScrollSections();
+		});
+	});
+</script>

@@ -1,0 +1,85 @@
+<include src="index/personal.scss"></include>
+<div id="personal" class="section">
+	<div class="content column">
+		<h2 class="title title-large">Personal Work</h2>
+		<div class="description description-regular">Most of my personal projects revolve around my ecosystem of
+			reusable code.
+			<br>
+			<br>
+			For NodeJS I run a private package system stored on BunnyCDN and imported into projects from a command line
+			module. All of my websites use a library free static compiler, markup language and automatic website
+			optimizer that are self made.
+			<br>
+			<br>
+			Project code is backed up to two storage regions in BunnyCDN & AWS S3 daily. I love Git but no longer use it
+			for personal work as it started causing problems with no benefits.
+		</div>
+
+		<div class="items column">
+			<include src="index/component/personal-item.html"
+			year="2024"
+			month="April"
+			title="WCAG Color Picker"
+			tags="NodeJS,Fastify,HTML,SCSS,JS"
+			description="Created an HSV colour picker only populated with RGB values that pass WCAG contrast checks for white, black and both. Used a Voronoi algorithm to populate the empty space in the hue images between valid colours."
+			></include>
+
+			<include src="index/component/personal-item.html"
+			month="February"
+			title="Cold Calling Automation"
+			tags="C++,Arduino,NodeJS,Web Sockets"
+			description="Created a fake bluetooth mouse using an esp32 device. It maintains a serial connection to my computer to receive instructions, and a bluetooth mouse connection to my iPhone. Enables me to start & end phone calls from my computer keyboard without ever touching my phone. C++ was required for latency reasons."
+			></include>
+
+			<include src="index/component/personal-item.html"
+			month="January"
+			title="Cold Call Manager"
+			tags="NodeJS,Web Sockets,HTML,SCSS,JS"
+			description="Created a socket based NodeJS app that syncs a phone to a “master” computer. The app reads a spreadsheet determining what companies are available to call. Records when I called a business along with call statuses & call notes. "
+			></include>
+
+			<include src="index/component/personal-item.html"
+			title="Small Business Finder"
+			tags="NodeJS,Google Places API,Puppeteer"
+			description="A lead finder & qualifier. Accepting a search term and country, makes a Google Places search in all somewhat populated cities for that country. Gets the details for every unique place found, analyzing their website for faults if one exists."
+			></include>
+
+
+
+			<include src="index/component/personal-item.html"
+			year="2023"
+			month="December"
+			title="Computer Backup Tool"
+			tags="NodeJS,Bash,Daemon,BunnyCDN,AWS S3"
+			description="A terminal command that uses NodeJS to backup my files to two storage zones in both BunnyCDN & AWS S3. A daemon executes the script twice per day."
+			></include>
+
+			<include src="index/component/personal-item.html"
+			month="October"
+			title="Halloween Show Editor"
+			tags="HTML,CSS,JS,NodeJS,Youtube API"
+			description="The most complex UI i’ve built. Scrapes youtube for the mp3 of a target song. Renders a timeline for 5 laser displays and 7 lights. Allows users to create & configure events on the timeline for each individual device."
+			></include>
+
+			<include src="index/component/personal-item.html"
+			title="Halloween Laser Path Generator"
+			tags="HTML,CSS,JS"
+			description="Created a UI that allows users to create RGB path points that get exported to JSON instructions for the laser projectors. I stored the design instructions in querystring so it could be easily shared, edited and stored without the need for a server."
+			></include>
+
+			<include src="index/component/personal-item.html"
+			month="August"
+			title="WebGL Rendering Engine"
+			tags="WebGL,Graphic Shaders,HTML,CSS,JS"
+			description="Graphics programming had started to fascinate me so I spent 2 months learning barebones WebGL and ES SL shaders. Ended up with a renderer that supports proper bloom, sun shafts and reflections among other basic graphic features. <br><br>Runtime is great for a browser, at half resolution it runs at ~1-3ms/frame (300 - 1000 fps) on an integrated macbook GPU. It leaves enough performance overhead for a simple game to run on."
+			></include>
+
+			<include src="index/component/personal-item.html"
+			month="June"
+			title="Telnetflix"
+			tags="WebGL,Graphic Shaders,Adobe After Effects,HTML,CSS,JS"
+			description="My friend built a program that renders movies to text over SSH so I built him a simple website that displayed the available movies so he could share his work more easily. <br><br>I used WebGL & Shader code to make two transition animations between movies. Both of the animations making up the intro sequence were made in Adobe After Effects. It was a lot of fun putting together the visual components for this project."
+			></include>
+		</div>
+	</div>
+</div>

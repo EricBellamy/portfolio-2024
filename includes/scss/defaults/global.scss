@@ -1,0 +1,33 @@
+@import "config/_fonts.scss";
+
+@import "defaults/box-shadow.scss";
+@import "defaults/border.scss";
+@import 'defaults/button.scss';
+@import 'defaults/flex.scss';
+@import 'defaults/font.scss';
+@import 'defaults/image.scss';
+@import 'defaults/input.scss';
+@import 'defaults/margin.scss';
+@import 'defaults/opacity.scss';
+@import 'defaults/padding.scss';
+@import 'defaults/position.scss';
+
+
+body {
+	font-family: $font-regular;
+	letter-spacing: 0.02em;
+	line-height: 1.3;
+}
+.lh-15 {
+	line-height: 1.5;
+}
+#sections {
+	min-height: 100%;
+	height: 100%;
+}
+.svg {
+	display: flex !important;
+}
+.pointer {
+	cursor: pointer;
+}

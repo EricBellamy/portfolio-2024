@@ -1,0 +1,11 @@
+@import "config/_colors.scss";
+
+.bs-dark {
+	box-shadow: 0 0 16px 0 #{$box-shadow-color}#{map-get($box-shadow-strengths, dark)};
+}
+.bs-regular {
+	box-shadow: 0 0 16px 0 #{$box-shadow-color}#{map-get($box-shadow-strengths, regular)};
+}
+.bs-light {
+	box-shadow: 0 0 16px 0 #{$box-shadow-color}#{map-get($box-shadow-strengths, light)};
+}

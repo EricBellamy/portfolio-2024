@@ -1,0 +1,27 @@
+@import "config/_general.scss";
+@each $size in $border-radius-sizes {
+	.br-#{$size} {
+		border-radius: $size;
+		overflow: hidden;
+	}
+	.btr-#{$size} {
+		border-top-right-radius: $size;
+		border-top-left-radius: $size;
+		overflow: hidden;
+	}
+	.brr-#{$size} {
+		border-top-right-radius: $size;
+		border-bottom-right-radius: $size;
+		overflow: hidden;
+	}
+	.bbr-#{$size} {
+		border-bottom-right-radius: $size;
+		border-bottom-left-radius: $size;
+		overflow: hidden;
+	}
+	.blr-#{$size} {
+		border-top-left-radius: $size;
+		border-bottom-left-radius: $size;
+		overflow: hidden;
+	}
+}

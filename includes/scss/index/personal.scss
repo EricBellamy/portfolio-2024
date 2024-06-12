@@ -1,0 +1,55 @@
+#personal {
+	padding-top: 80px;
+	padding-bottom: 120px;
+
+	.title, .description {
+		color: #fff;
+	}
+
+	.items {
+		margin-top: 64px;
+
+		.item > * {
+			margin-bottom: 8px;
+		}
+		.item {
+			margin-bottom: 32px;
+		}
+		.item:last-child {
+			margin-bottom: 0;
+		}
+
+		.little {
+			display: flex;
+			font-weight: 900;
+			margin-bottom: 16px;
+
+			.year {
+				margin-right: 8px;
+				padding: 4px 12px;
+				color: #000;
+				background: #00C92C;
+				border-radius: 4px;
+			}
+			.month {
+				padding: 4px 12px;
+				color: #000;
+				background: #0C65E8;
+				border-radius: 4px;
+			}
+		}
+
+		.tags {
+			display: flex;
+			color: #FFC700;
+			flex-wrap: wrap;
+			margin-bottom: 0;
+
+			.tag {
+				margin-right: 16px;
+				white-space: nowrap;
+				margin-bottom: 8px;
+			}
+		}
+	}
+}

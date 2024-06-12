@@ -1,0 +1,35 @@
+<?
+
+const schema = {
+	"@context": "http://schema.org/",
+	"@type": "LocalBusiness",
+	"name": project.info.localBusiness.name,
+	"description": project.info.localBusiness.description,
+	"image": project.info.localBusiness.image,
+	"url": project.info.url.full,
+	"logo": project.info.logo.src,
+	"faxNumber": project.info.profile.faxNumber,
+	"email": project.info.profile.email,
+	"areaServed": project.info.localBusiness.areaServed,
+	"paymentAccepted": project.info.localBusiness.paymentAccepted,
+	"address": {
+		"@type": "PostalAddress",
+		"streetAddress": project.info.service.provider.address.streetAddress,
+		"addressLocality": project.info.service.provider.address.addressLocality,
+		"addressRegion": project.info.service.provider.address.addressRegion,
+		"postalCode": project.info.service.provider.address.postalCode,
+		"postOfficeBoxNumber": project.info.profile.postOfficeBoxNumber
+	},
+	"sameAs": project.info.sameAs,
+	"contactPoint": [
+		{
+			"@type": "ContactPoint",
+			"telephone": project.info.profile.phone_link,
+			"contactType": "customer service"
+		}
+	],
+	"openingHoursSpecification": project.info.localBusiness.openingHoursSpecification
+}
+
+?>
+<script type="application/ld+json"><? log(JSON.stringify(schema)); ?></script>

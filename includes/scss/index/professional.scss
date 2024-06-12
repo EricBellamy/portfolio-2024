@@ -1,0 +1,60 @@
+#darkContent {
+	transition: opacity .3s ease;
+	transition-delay: .3s;
+}
+
+#professional {
+	margin-bottom: 80px;
+	max-width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+
+	.title, .description, .accent {
+		color: #fff;
+	}
+
+	.content {
+		> .title {
+			margin-top: 96px;
+			margin-bottom: 16px;
+		}
+
+		.item {
+			margin-bottom: 48px;
+
+			.title {
+				margin: 4px 0 8px 0;
+				letter-spacing: 0.02em;
+			}
+			.top {
+				align-items: center;
+				.relative {
+					max-width: 360px;
+				}
+			}
+		}
+		.item:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	@media screen and (min-width: 560px){
+		.content > .title {
+			margin-bottom: 32px;
+		}
+
+		.item {
+			flex-direction: row;
+
+			.top {
+				.relative {
+					width: 160px;
+				}
+				margin-right: 16px;
+			}
+			.bottom {
+				flex: 1;
+			}
+		}
+	}
+}

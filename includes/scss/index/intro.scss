@@ -1,0 +1,28 @@
+#intro {
+	position: relative;
+	box-sizing: content-box;
+	padding-bottom: 15vh;
+	transition: opacity .3s ease;
+
+	.center {
+		width: 100%;
+		max-width: 640px;
+		z-index: 0;
+		padding: 0 32px;
+
+		h1 {
+			margin: 0;
+			font-weight: 300;
+			letter-spacing: 0.03em;
+			font-size: 40px;
+	
+			b {
+				font-weight: 900;
+			}
+		}
+		p {
+			font-size: 20px;
+			font-weight: 200;
+		}
+	}
+}

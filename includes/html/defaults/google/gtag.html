@@ -1,0 +1,18 @@
+<? if(0 < project.info.thirdparty.gtag_id.length){ ?>
+	<!-- https://www.googletagmanager.com/gtag/js?id=G-D94L7MYV7M -->
+	<link rel="preconnect" href="https://www.google-analytics.com">
+	<script>
+		// Make this a global function for later usage
+		window.addEventListener('load', function () {
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+			gtag('config', "{{project.info.thirdparty.gtag_id}}");
+	
+			const scriptTag = document.createElement("script");
+			scriptTag.src = "https://tipsybartender.com/exports/google/gtag.js";
+			scriptTag.setAttribute("defer", "");
+			document.body.appendChild(scriptTag);
+		});
+	</script>
+<? } ?>

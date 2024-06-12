@@ -1,0 +1,16 @@
+<div class="item">
+	<? if(attr.month != undefined){ ?>
+	<div class="little">
+		<? if(attr.year != undefined){ ?><div class="year">{{attr.year}}</div><? } ?>
+		<div class="month">{{attr.month}}</div>
+	</div>
+	<? } ?>
+	<div class="title title-regular">{{attr.title}}</div>
+	<div class="tags">
+		<? attr.tags = attr.tags.split(","); ?>
+		<? for(const tag of attr.tags){ ?>
+			<div class="tag">{{tag}}</div>
+		<? } ?>
+	</div>
+	<div class="description description-regular">{{attr.description}}</div>
+</div>

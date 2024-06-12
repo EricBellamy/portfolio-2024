@@ -1,0 +1,30 @@
+<!-- image_url, url, title, date, description -->
+<? if(attr.url[attr.url.length - 1] != "/") attr.url += "/"; ?>
+<? if(attr.url[0] === "/") attr.url = attr.url.substring(1); ?>
+<script type="application/ld+json" id="baseSchema">
+	{
+		"@context": "https://schema.org",
+		"@graph": [
+			{
+				"@type": "WebPage",
+				"@id": "{{project.info.url.full}}/{{attr.url}}#webpage",
+				"url": "{{project.info.url.full}}/{{attr.url}}",
+				"name": "{{page.title}}",
+				"isPartOf": {
+					"@id": "{{project.info.url.full}}/#website"
+				},
+				"datePublished": "{{attr.date}}",
+				"description": "{{page.description}}",
+				"inLanguage": "en-US",
+				"potentialAction": [
+					{
+						"@type": "ReadAction",
+						"target": [
+							"{{project.info.url.full}}/{{attr.url}}"
+						]
+					}
+				]
+			}
+		]
+	}
+</script>

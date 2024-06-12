@@ -1,0 +1,122 @@
+{
+    "info": {
+        "name": "tired",
+        "region": "use",
+        "published_time": "2024-06-08T00:38:29.599Z",
+        "url": {
+            "base": "tired.dev",
+            "full": "https://tired.dev"
+        },
+        "logo": {
+            "src": "https://tired.dev/exports/logo/logo.png",
+            "width": 311,
+            "height": 80
+        },
+        "sameAs": [],
+        "thirdparty": {
+            "gtag_id": ""
+        },
+        "profile": {
+            "phone_visual": "(123) 456-7890",
+            "phone_link": "123-456-7890",
+            "email": "",
+            "postOfficeBoxNumber": "",
+            "faxNumber": ""
+        },
+        "social": {
+            "twitter_handle": "",
+            "twitter_link": "",
+            "google_link": "",
+            "facebook_link": "",
+            "instagram_link": ""
+        },
+        "sitemap": [
+            {
+                "href": "/",
+                "text": "Home"
+            }
+        ],
+        "service": {
+            "name": "Drain Cleaning",
+            "description": "Professional drain cleaning services to unclog and clean residential and commercial drains.",
+            "provider": {
+                "name": "Your Plumbing Business",
+                "address": {
+                    "streetAddress": "123 Main Street",
+                    "addressLocality": "Your City",
+                    "addressRegion": "Your State",
+                    "postalCode": "12345",
+                    "addressCountry": "Your Country"
+                }
+            },
+            "areaServed": {
+                "geoMidpoint": {
+                    "latitude": 37.12345,
+                    "longitude": -122.6789
+                },
+                "geoRadius": "50 miles"
+            },
+            "serviceType": "Plumbing",
+            "serviceOutput": "Unclogged and clean drains",
+            "priceRange": "$$$"
+        },
+        "localBusiness": {
+            "name": "Horizon Plumbing & Piping Systems",
+            "description": "Plumber, Plumbing Company and Plumbing Services",
+            "image": "https://horizonplumbing.ca/wp-content/themes/rplu7/images/rich-card.png",
+            "areaServed": "Ottawa, Nepean and Kanata",
+            "paymentAccepted": "Visa, Mastercard, American Express, Cash, Check, Debit, Etransfer",
+            "openingHoursSpecification": [
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": "http://schema.org/Monday",
+                    "opens": "07:00",
+                    "closes": "16:00"
+                },
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": "http://schema.org/Tuesday",
+                    "opens": "07:00",
+                    "closes": "16:00"
+                },
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": "http://schema.org/Wednesday",
+                    "opens": "07:00",
+                    "closes": "16:00"
+                },
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": "http://schema.org/Thursday",
+                    "opens": "07:00",
+                    "closes": "16:00"
+                },
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": "http://schema.org/Friday",
+                    "opens": "07:00",
+                    "closes": "16:00"
+                }
+            ]
+        }
+    },
+    "styles": {
+        "primary": "#AC8856",
+        "primaryLight": "#FFBA43",
+        "secondary": "#FFBA43",
+        "secondaryLight": "#FFBA43",
+        "headerColor": "#1a1a1a",
+        "bodyTextColor": "#4E4B66",
+        "bodyTextColorWhite": "#FAFBFC",
+        "link": "#AC8856",
+        "linkVisited": "#AC8856",
+        "topperFontSize": "clamp(.8125rem, 1.6vw, 1rem)",
+        "headerFontSize": "clamp(1.9375rem, 3.9vw, 3.0625rem)",
+        "bodyFontSize": "1rem",
+        "sectionPadding": "clamp(3.75rem, 7.82vw, 6.25rem) 1rem"
+    },
+    "pages": {
+        "404": [],
+        "index": []
+    }
+}

@@ -1,0 +1,34 @@
+#interests {
+	padding-top: 320px;
+	padding-bottom: 320px;
+	position: relative;
+
+	background: #0C65E8;
+
+	&:before {
+		content: "";
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 240px;
+		background: #0C65E8;
+		background: linear-gradient(#000, #0C65E8);
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		z-index: 1;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 240px;
+		background: #0C65E8;
+		background: linear-gradient(#0C65E8, #000);
+	}
+	
+	.title, .description {
+		color: #fff;
+	}
+}

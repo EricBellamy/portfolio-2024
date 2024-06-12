@@ -1,0 +1,15 @@
+<div class="item column">
+	<div class="top column">
+		<div class="relative">
+			<include id="selfie" src="professional/{{attr.image-src}}"></include>
+			<include class="blurred image-cover {{attr.blur-level}}" src="professional/{{attr.image-src}}"></include>
+		</div>
+	</div>
+	<div class="bottom column">
+		<div class="accent"><span style="color: {{attr.color}}">{{attr.job-title}}</span> {{attr.job-duration}}</div>
+		<h3 class="title title-regular">{{attr.company}}</h3>
+		<p class="description description-regular">
+			{{attr.description}}
+		</p>
+	</div>
+</div>

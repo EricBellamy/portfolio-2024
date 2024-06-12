@@ -1,0 +1,27 @@
+<?
+const schemas = [
+	{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": project.info.name,
+		"url": project.info.url.full,
+		"logo": {
+			"@type": "ImageObject",
+			"url": project.info.logo.src,
+			"width": project.info.logo.width,
+			"height": project.info.logo.height
+		},
+		"sameAs": project.info.sameAs
+	},
+	{
+		"@context": "http://schema.org",
+		"@type": "WebSite",
+		"@id": project.info.url.full + "/#website",
+		"url": project.info.url.full + "/",
+		"name": page.title,
+		"description": page.description,
+		"inLanguage": "en-US"
+	}
+]
+?>
+<script type="application/ld+json"><? log(JSON.stringify(schemas)); ?></script>

@@ -1,0 +1,54 @@
+@import "config/_dimensions.scss";
+@import "config/_spacing.scss";
+@each $size in $spacing {
+	.m-#{$size} {
+		margin: $size + px;
+	}
+	.mt-#{$size} {
+		margin-top: $size + px;
+	}
+	.mr-#{$size} {
+		margin-right: $size + px;
+	}
+	.mb-#{$size} {
+		margin-bottom: $size + px;
+	}
+	.ml-#{$size} {
+		margin-left: $size + px;
+	}
+	.my-#{$size} {
+		margin-top: $size + px;
+		margin-bottom: $size + px;
+	}
+	.mx-#{$size} {
+		margin-right: $size + px;
+		margin-left: $size + px;
+	}
+}
+
+.mt-auto {
+	margin-top: auto;
+}
+.mr-auto {
+	margin-right: auto;
+}
+.mb-auto {
+	margin-bottom: auto;
+}
+.ml-auto {
+	margin-left: auto;
+}
+.my-auto {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.mx-auto {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.mw {
+	width: 100%;
+	max-width: $max-width;
+	margin: 0 auto;
+}
