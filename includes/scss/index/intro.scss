@@ -2,7 +2,7 @@
 	position: relative;
 	box-sizing: content-box;
 	padding-bottom: 15vh;
-	transition: opacity .3s ease;
+	z-index: -1;
 
 	.center {
 		width: 100%;
@@ -15,7 +15,7 @@
 			font-weight: 300;
 			letter-spacing: 0.03em;
 			font-size: 40px;
-	
+
 			b {
 				font-weight: 900;
 			}
