@@ -1,8 +1,8 @@
 <div class="item column">
 	<div class="top column">
 		<div class="relative">
-			<include id="selfie" src="professional/{{attr.image-src}}"></include>
-			<include class="blurred image-cover {{attr.blur-level}}" src="professional/{{attr.image-src}}"></include>
+			<include id="selfie" key="professional/{{attr.image-src}}" src="professional/{{attr.image-src}}"></include>
+			<include class="blurred image-contain {{attr.blur-level}}" key="professional/blurred-{{attr.image-src}}" src="professional/{{attr.image-src}}"></include>
 		</div>
 	</div>
 	<div class="bottom column">
