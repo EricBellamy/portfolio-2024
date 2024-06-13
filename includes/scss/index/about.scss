@@ -3,6 +3,8 @@
 
 	.content {
 		align-items: center;
+		max-width: 872px;
+		margin: 0 auto;
 
 		.top {
 			margin-bottom: 32px;
@@ -20,7 +22,7 @@
 			}
 		}
 		.bottom {
-			max-width: 480px;
+			// max-width: 480px;
 			z-index: 10;
 		}
 	}

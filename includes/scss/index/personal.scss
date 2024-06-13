@@ -6,6 +6,11 @@
 		color: #fff;
 	}
 
+	> .content {
+		max-width: 872px;
+		margin: 0 auto;
+	}
+
 	.items {
 		margin-top: 64px;
 
@@ -23,6 +28,7 @@
 			display: flex;
 			font-weight: 900;
 			margin-bottom: 16px;
+			margin-top: 32px;
 
 			.year {
 				margin-right: 8px;

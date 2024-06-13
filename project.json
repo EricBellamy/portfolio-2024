@@ -17,8 +17,8 @@
             "gtag_id": ""
         },
         "profile": {
-            "phone_visual": "(123) 456-7890",
-            "phone_link": "123-456-7890",
+            "phone_visual": "",
+            "phone_link": "",
             "email": "",
             "postOfficeBoxNumber": "",
             "faxNumber": ""
@@ -37,67 +37,36 @@
             }
         ],
         "service": {
-            "name": "Drain Cleaning",
-            "description": "Professional drain cleaning services to unclog and clean residential and commercial drains.",
+            "name": "Senior Full Stack Developer",
+            "description": "",
             "provider": {
-                "name": "Your Plumbing Business",
+                "name": "",
                 "address": {
-                    "streetAddress": "123 Main Street",
-                    "addressLocality": "Your City",
-                    "addressRegion": "Your State",
-                    "postalCode": "12345",
-                    "addressCountry": "Your Country"
+                    "streetAddress": "",
+                    "addressLocality": "Ottawa",
+                    "addressRegion": "Ontario",
+                    "postalCode": "",
+                    "addressCountry": "Canada"
                 }
             },
             "areaServed": {
                 "geoMidpoint": {
-                    "latitude": 37.12345,
-                    "longitude": -122.6789
+                    "latitude": 0,
+                    "longitude": 0
                 },
                 "geoRadius": "50 miles"
             },
-            "serviceType": "Plumbing",
-            "serviceOutput": "Unclogged and clean drains",
-            "priceRange": "$$$"
+            "serviceType": "Programming",
+            "serviceOutput": "",
+            "priceRange": ""
         },
         "localBusiness": {
-            "name": "Horizon Plumbing & Piping Systems",
-            "description": "Plumber, Plumbing Company and Plumbing Services",
-            "image": "https://horizonplumbing.ca/wp-content/themes/rplu7/images/rich-card.png",
-            "areaServed": "Ottawa, Nepean and Kanata",
-            "paymentAccepted": "Visa, Mastercard, American Express, Cash, Check, Debit, Etransfer",
-            "openingHoursSpecification": [
-                {
-                    "@type": "OpeningHoursSpecification",
-                    "dayOfWeek": "http://schema.org/Monday",
-                    "opens": "07:00",
-                    "closes": "16:00"
-                },
-                {
-                    "@type": "OpeningHoursSpecification",
-                    "dayOfWeek": "http://schema.org/Tuesday",
-                    "opens": "07:00",
-                    "closes": "16:00"
-                },
-                {
-                    "@type": "OpeningHoursSpecification",
-                    "dayOfWeek": "http://schema.org/Wednesday",
-                    "opens": "07:00",
-                    "closes": "16:00"
-                },
-                {
-                    "@type": "OpeningHoursSpecification",
-                    "dayOfWeek": "http://schema.org/Thursday",
-                    "opens": "07:00",
-                    "closes": "16:00"
-                },
-                {
-                    "@type": "OpeningHoursSpecification",
-                    "dayOfWeek": "http://schema.org/Friday",
-                    "opens": "07:00",
-                    "closes": "16:00"
-                }
-            ]
+            "name": "tired.dev",
+            "description": "Senior developer, programming and web development services",
+            "image": "",
+            "areaServed": "Ottawa",
+            "paymentAccepted": "",
+            "openingHoursSpecification": []
         }
     },
     "styles": {
