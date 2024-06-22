@@ -6,11 +6,14 @@
 		</div>
 	</div>
 	<div class="bottom column">
-		<div class="accent"><span style="color: {{attr.color}}">{{attr.job-title}}</span> {{attr.job-duration}}</div>
+		<div class="accent"><span style="color: {{attr.accent-color}}">{{attr.job-title}}</span> {{attr.job-duration}}</div>
 		<h3 class="title title-regular">{{attr.company}}</h3>
 		<p class="description description-regular">
 			{{attr.description}}
 		</p>
-		<? if(attr.link != undefined){ ?><a href="{{attr.link}}" class="link" style="color: {{attr.link-color}}; background: {{attr.color}}">Website Link</a><? } ?>
+		<div class="buttons">
+			<? if(attr.link != undefined){ ?><a href="{{attr.link}}" class="link" style="color: {{attr.link-color}}; background: {{attr.link-background}}">Website Link</a><? } ?>
+			<? if(attr.figma != undefined){ ?><a href="{{attr.figma}}" target="_blank" class="link figma">Design File</a><? } ?>
+		</div>
 	</div>
 </div>

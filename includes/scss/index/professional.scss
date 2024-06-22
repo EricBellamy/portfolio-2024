@@ -43,12 +43,23 @@
 				align-items: start;
 			}
 
+			.buttons {
+				display: flex;
+				
+				a {
+					display: block;
+				}
+			}
 			.link {
 				color: #000;
 				background: #fff;
 				padding: 8px 16px;
 				border-radius: 4px;
 				margin-top: 32px;
+
+				&.figma {
+
+				}
 			}
 		}
 		.item:last-child {
